@@ -15,6 +15,7 @@ const Hero = () => {
         // Add Flickity options here
         wrapAround: true,
         autoPlay: true,
+        pageDots: false,
       });
       return () => {
         // Destroy Flickity carousel on unmount
