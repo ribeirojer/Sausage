@@ -27,13 +27,13 @@ const Hero = () => {
     <div className="hero">
       <div className="carousel" ref={flickityRef}>
         <div className="carousel-cell">
-          <img src={imagem1} alt="slide 1" />
+          <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=80" alt="slide 1" />
         </div>
         <div className="carousel-cell">
-          <img src={imagem2} alt="slide 2" />
+          <img src="https://images.unsplash.com/photo-1621856625680-282ec3a17db8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="slide 2" />
         </div>
         <div className="carousel-cell">
-          <img src={imagem3} alt="slide 3" />
+          <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="slide 3" />
         </div>
       </div>
     </div>
