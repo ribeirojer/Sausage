@@ -1,23 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import App from "./App";
 import Home from "./pages/Home";
 import About from "./pages/About";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home></Home>,
-  },
-  {
-    path: "about",
-    element: <About></About>,
-  },
-]);
+import Services from "./pages/Services";
+import Team from "./pages/Team";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Routes>
+        <Route element={<App />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/agency" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );

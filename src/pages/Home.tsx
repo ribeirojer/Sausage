@@ -5,7 +5,6 @@ import HeroSection from "../components/HeroSection";
 const Home = () => {
   return (
     <div className="relative">
-      <Header></Header>
       <HeroSection></HeroSection>
     </div>
   );
