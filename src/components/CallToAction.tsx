@@ -9,10 +9,10 @@ const CallToAction = (props: Props) => {
         <div className="bg-primary relative z-10 overflow-hidden rounded py-12 px-8 md:p-[70px]">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
-              <span className="mb-2 text-base font-semibold text-white">
+              <span className="mb-2 text-base font-semibold text-black">
                 Find Your Next Dream App
               </span>
-              <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[38px] lg:mb-0">
+              <h2 className="mb-6 text-3xl font-bold leading-tight text-black sm:mb-8 sm:text-[38px] lg:mb-0">
                 Get started with <br className="xs:block hidden" />
                 our free trial
               </h2>
@@ -21,13 +21,13 @@ const CallToAction = (props: Props) => {
               <div className="flex flex-wrap lg:justify-end">
                 <a
                   href="javascript:void(0)"
-                  className="hover:text-primary my-1 mr-4 inline-block rounded bg-white bg-opacity-[15%] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
+                  className="hover:text-primary my-1 mr-4 inline-block rounded bg-black bg-opacity-[15%] py-4 px-6 text-base font-medium text-black transition hover:bg-opacity-100 md:px-9 lg:px-6 xl:px-9"
                 >
                   Get Pro Version
                 </a>
                 <a
                   href="javascript:void(0)"
-                  className="my-1 inline-block rounded bg-[#13C296] py-4 px-6 text-base font-medium text-white transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
+                  className="my-1 inline-block rounded bg-[#13C296] py-4 px-6 text-base font-medium text-black transition hover:bg-opacity-90 md:px-9 lg:px-6 xl:px-9"
                 >
                   Start Free Trial
                 </a>
