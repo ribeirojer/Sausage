@@ -104,6 +104,7 @@ const Header = (props: Props) => {
           </li>
         </ul>
       </nav>
+      <div className="absolute w-[100vw] h-[100vh] bg-black"></div>
     </header>
   );
 };
