@@ -14,7 +14,7 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <FooterContainer>
-      <div className="container">
+      <div className="footer-column">
         <Link to={"/"} className="mb-6 inline-block max-w-[160px]">
           <img src={logo} alt="logo" />
         </Link>
@@ -29,41 +29,41 @@ const Footer = (props: Props) => {
           <span>(12) 98158 0992</span>
         </p>
       </div>
-      <div className="container">
+      <div className="footer-column">
         <h4>Recursos</h4>
         <ul>
           <li>
-            <Link to="/">Desenvolvimento de SaaS</Link>
+            <Link to="/saas-development">Desenvolvimento de SaaS</Link>
           </li>
           <li>
-            <Link to="/">Nossos produtos</Link>
+            <Link to="/our-products">Nossos produtos</Link>
           </li>
           <li>
-            <Link to="/">Fluxo de usuário</Link>
+            <Link to="/user-flow">Fluxo de usuário</Link>
           </li>
           <li>
-            <Link to="/">Estratégia do usuário</Link>
+            <Link to="/user-strategy">Estratégia do usuário</Link>
           </li>
         </ul>
       </div>
-      <div className="container">
+      <div className="footer-column">
         <h4>Empresa</h4>
         <ul>
           <li>
-            <Link to="/">Sobre a Hey There</Link>
+            <Link to="/about-us">Sobre a Hey There</Link>
           </li>
           <li>
-            <Link to="/">Contato e Suporte</Link>
+            <Link to="/contact">Contato e Suporte</Link>
           </li>
           <li>
-            <Link to="/">Histórico de sucesso</Link>
+            <Link to="/success-stories">Histórico de sucesso</Link>
           </li>
           <li>
-            <Link to="/">Configurações e privacidade</Link>
+            <Link to="/settings-and-privacy">Configurações e privacidade</Link>
           </li>
         </ul>
       </div>
-      <div className="container">
+      <div className="footer-column">
         <h4>Links rápidos</h4>
         <ul>
           <li>
@@ -80,19 +80,19 @@ const Footer = (props: Props) => {
           </li>
         </ul>
       </div>
-      <div className="container">
+      <div className="footer-column">
         <h4>Siga-nos</h4>
         <div className="social-icons">
-          <a href="https://www.facebook.com">
+          <a target={"_blank"} href="https://www.facebook.com">
             <FacebookLogo size={32} />
           </a>
-          <a href="https://www.twitter.com">
+          <a target={"_blank"} href="https://www.twitter.com">
             <TwitterLogo size={32} />
           </a>
-          <a href="https://www.instagram.com">
+          <a target={"_blank"} href="https://www.instagram.com">
             <InstagramLogo size={32} />
           </a>
-          <a href="https://www.linkedin.com">
+          <a target={"_blank"} href="https://www.linkedin.com">
             <LinkedinLogo size={32} />
           </a>
         </div>
