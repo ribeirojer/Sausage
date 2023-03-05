@@ -1,4 +1,3 @@
-import { List, X } from "phosphor-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
@@ -9,6 +8,10 @@ type Props = {};
 const Header = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Container>
       <Link to={"/"}>
@@ -16,7 +19,12 @@ const Header = (props: Props) => {
       </Link>
       <div className="checkbox-container">
         <div className="checkbox-wrapper">
-          <input type="checkbox" id="toggle"></input>
+          <input
+            type="checkbox"
+            id="toggle"
+            checked={isMenuOpen}
+            onChange={handleMenuClick}
+          />
           <label htmlFor="toggle" className="checkbox">
             <div className="trace"></div>
             <div className="trace"></div>
@@ -26,22 +34,34 @@ const Header = (props: Props) => {
           <nav className="menu-itens">
             <ul>
               <li>
-                <Link to={"/"}>Home</Link>
+                <Link to={"/"} onClick={handleMenuClick}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to={"/agency"}>A Agência</Link>
+                <Link to={"/agency"} onClick={handleMenuClick}>
+                  A Agência
+                </Link>
               </li>
               <li>
-                <Link to={"/services"}>Serviços</Link>
+                <Link to={"/services"} onClick={handleMenuClick}>
+                  Serviços
+                </Link>
               </li>
               <li>
-                <Link to={"/team"}>Time</Link>
+                <Link to={"/team"} onClick={handleMenuClick}>
+                  Time
+                </Link>
               </li>
               <li>
-                <Link to={"/projects"}>Projetos</Link>
+                <Link to={"/projects"} onClick={handleMenuClick}>
+                  Projetos
+                </Link>
               </li>
               <li>
-                <Link to={"/contact"}>Contato</Link>
+                <Link to={"/contact"} onClick={handleMenuClick}>
+                  Contato
+                </Link>
               </li>
             </ul>
           </nav>

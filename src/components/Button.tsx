@@ -1,32 +1,38 @@
-import React, { ButtonHTMLAttributes } from "react";
+import { ReactNode } from "react";
+import styled from "styled-components";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
-}
+type Props = {
+  background: string;
+  color: string;
+  children: ReactNode;
+};
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  className = "",
-  variant = "primary",
-  ...rest
-}) => {
-  const baseStyle =
-    "px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-opacity-50";
+const ButtonWrapper = styled.button<Props>`
+  margin-top: 15px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 55px;
+  background-color: ${(props) => props.background || "#8e5572"};
+  color: ${(props) => props.color || "#ffffff"};
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 2px solid ${(props) => props.background || "#8e5572"};
+  font-weight: 700;
 
-  const primaryStyle = "bg-blue-500 text-white hover:bg-blue-700";
-  const secondaryStyle = "bg-gray-300 hover:bg-gray-400";
-
-  let buttonStyle = "";
-  if (variant === "primary") {
-    buttonStyle = primaryStyle;
-  } else if (variant === "secondary") {
-    buttonStyle = secondaryStyle;
+  &:hover {
+    color: ${(props) => props.background || "#8e5572"};
+    background-color: transparent;
+    border: 2px solid ${(props) => props.background || "#8e5572"};
+    font-weight: 700;
   }
+`;
 
+const Button = ({ background, color, children }: Props) => {
   return (
-    <button className={`${baseStyle} ${buttonStyle} ${className}`} {...rest}>
+    <ButtonWrapper background={background} color={color}>
       {children}
-    </button>
+    </ButtonWrapper>
   );
 };
 
