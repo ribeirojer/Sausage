@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
-import image1 from "../assets/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg";
-import image2 from "../assets/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg";
-import image3 from "../assets/ofspace-digital-agency-iprE_0Fkg5g-unsplash.jpg";
+import image1 from "../../assets/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg";
+import image2 from "../../assets/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg";
+import image3 from "../../assets/ofspace-digital-agency-iprE_0Fkg5g-unsplash.jpg";
 
 const Wrapper = styled.div`
   width: 100%;

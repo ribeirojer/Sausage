@@ -1,6 +1,6 @@
 import CardComponent from "./PortfolioCard";
 import { useState } from "react";
-import Button from "../../components/Button";
+import Button from "../../../components/Button";
 import { Eye, EyeClosed } from "phosphor-react";
 import { Section } from "./Styles";
 

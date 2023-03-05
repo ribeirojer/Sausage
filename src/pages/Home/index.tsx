@@ -1,6 +1,6 @@
-import HeroSection from "../components/HeroSection";
-import CallToAction from "../components/CallToAction";
-import Portifolio from "../components/Portifolio";
+import HeroSection from "./HeroSection";
+import CallToAction from "./CallToAction";
+import Portifolio from "./Portifolio";
 
 const Home = () => {
   return (
