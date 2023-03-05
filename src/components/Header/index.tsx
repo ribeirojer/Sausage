@@ -1,0 +1,54 @@
+import { List, X } from "phosphor-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import { Container } from "./Styles";
+
+type Props = {};
+
+const Header = (props: Props) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <Container>
+      <Link to={"/"}>
+        <img src={logo} alt="logo" />
+      </Link>
+      <div className="checkbox-container">
+        <div className="checkbox-wrapper">
+          <input type="checkbox" id="toggle"></input>
+          <label htmlFor="toggle" className="checkbox">
+            <div className="trace"></div>
+            <div className="trace"></div>
+            <div className="trace"></div>
+          </label>
+          <div className="menu"></div>
+          <nav className="menu-itens">
+            <ul>
+              <li>
+                <Link to={"/"}>Home</Link>
+              </li>
+              <li>
+                <Link to={"/agency"}>A Agência</Link>
+              </li>
+              <li>
+                <Link to={"/services"}>Serviços</Link>
+              </li>
+              <li>
+                <Link to={"/team"}>Time</Link>
+              </li>
+              <li>
+                <Link to={"/projects"}>Projetos</Link>
+              </li>
+              <li>
+                <Link to={"/contact"}>Contato</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+export default Header;
