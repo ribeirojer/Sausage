@@ -49,11 +49,6 @@ const Header = (props: Props) => {
                 </Link>
               </li>
               <li>
-                <Link to={"/team"} onClick={handleMenuClick}>
-                  Time
-                </Link>
-              </li>
-              <li>
                 <Link to={"/projects"} onClick={handleMenuClick}>
                   Projetos
                 </Link>
