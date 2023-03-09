@@ -31,7 +31,7 @@ const ButtonWrapper = styled.button<Props>`
 `;
 
 const Button = ({
-  background = "#8e5572",
+  background = "#2e1c20",
   color = "#ffffff",
   children,
 }: Props) => {
