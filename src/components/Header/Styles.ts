@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+const colorClara = "#C7B8F8";
+const colorBranca = "#fff";
+const colorEscura = "#2e1c20";
+
 export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
   padding: 1rem 1.5rem;
 
   img {
-    height: 64px;
+    height: 5rem;
   }
 
   /* Menu Hamburguer */
@@ -33,7 +36,7 @@ export const Container = styled.header`
   .checkbox .trace {
     width: 50px;
     height: 2px;
-    background-color: #2e1c20;
+    background-color: ${colorBranca};
     position: absolute;
     border-radius: 4px;
     transition: 0.5s ease-in-out;
@@ -64,7 +67,7 @@ export const Container = styled.header`
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 0px #ffffff;
+    box-shadow: 0px 0px 0px 0px ${colorBranca};
     z-index: -1;
     transition: 400ms ease-in-out 0s;
   }
@@ -89,7 +92,7 @@ export const Container = styled.header`
   }
   .menu-itens ul li a {
     margin: 1rem 0;
-    color: #2e1c20;
+    color: ${colorEscura};
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 40px;
@@ -100,7 +103,7 @@ export const Container = styled.header`
 
   #toggle:checked + .checkbox .trace:nth-child(1) {
     transform: rotate(45deg);
-    background-color: #2e1c20;
+    background-color: ${colorEscura};
     top: 47px;
   }
   #toggle:checked + .checkbox .trace:nth-child(2) {
@@ -111,14 +114,14 @@ export const Container = styled.header`
   }
   #toggle:checked + .checkbox .trace:nth-child(3) {
     transform: rotate(-45deg);
-    background-color: #2e1c20;
+    background-color: ${colorEscura};
     top: 48px;
   }
   #toggle:checked + .checkbox {
-    background-color: #ffffff;
+    background-color: ${colorClara};
   }
   #toggle:checked ~ .menu {
-    box-shadow: 0px 0px 0px 100vmax white;
+    box-shadow: 0px 0px 0px 100vmax ${colorClara};
     z-index: 1;
   }
   #toggle:checked ~ .menu-itens {
