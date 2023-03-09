@@ -1,46 +1,45 @@
-import { useEffect, useState } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
-
-import image1 from "../../assets/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg";
-import image2 from "../../assets/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg";
-import image3 from "../../assets/ofspace-digital-agency-iprE_0Fkg5g-unsplash.jpg";
+import Button from "../../components/Button";
+import imagem from "../../assets/DrawKit Vector Illustration Black Friday & Online Shopping (1).png";
+import { MouseSimple } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 35vw;
-  overflow-x: hidden;
-  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  div {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  h2 {
+    text-align: end;
+  }
   img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 50vw;
   }
 `;
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [{ image: image1 }, { image: image2 }, { image: image3 }];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex: number) => (prevIndex + 1) % items.length);
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-  }, [items]);
-
-  const currentItem = items[currentIndex];
-
   return (
     <Wrapper>
-    <TransitionGroup>
-      <CSSTransition key={currentIndex} timeout={500} classNames="slide">
-        <img src={currentItem.image} alt="Image1" />
-      </CSSTransition>
-    </TransitionGroup>
-  </Wrapper>
+      <div>
+        <h1>OLÁ! Pronto para expandir sua presença digital?</h1>
+        <h2>
+          Transforme sua presença digital e aumente seus resultados com nossas
+          soluções de marketing personalizadas.
+        </h2>
+        <Link to={"/contact"}>
+        <Button>SIM!</Button>
+        </Link>
+      </div>
+      <MouseSimple size={32} />
+      <img src={imagem} alt="" />
+    </Wrapper>
   );
 };
 

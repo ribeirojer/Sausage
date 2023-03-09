@@ -31,8 +31,7 @@
   --border-color: #20235b;
 }
 body {
-  background-color: var(--cor-C);
-  color: var(--cor-A);
+  color: var(--cor-C);
 }
 h1 {
   font-family: "Dancing Script";
