@@ -6,8 +6,13 @@ export const Wrapper = styled.footer`
   justify-content: flex-end;
   padding: 0 8%;
   height: 432px;
-  background-color: #FFC1EB22;
-
+  background-image: linear-gradient(
+    to bottom,
+    #24161911,
+    #24161955,
+    #24161955,
+    #ffc1eb55
+  );
 
   .footerwrapper {
     display: flex;
@@ -40,6 +45,7 @@ export const Wrapper = styled.footer`
       align-items: center;
       p {
         margin-bottom: 0.8rem;
+        text-align: center;
       }
       div {
         width: 100%;
@@ -53,7 +59,7 @@ export const Wrapper = styled.footer`
         transition: 0.3s;
       }
       div a:hover {
-        color: #FFC1EB;
+        color: #ffc1eb;
       }
     }
 
@@ -90,6 +96,22 @@ export const Wrapper = styled.footer`
     a {
       color: var(--cor-C);
       text-decoration: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    height: unset;
+    .footerwrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      div {
+        width: unset;
+      }
+      .toOcult {
+        display: none;
+      }
     }
   }
 `;

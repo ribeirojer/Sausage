@@ -39,23 +39,23 @@ const Footer = (props: Props) => {
           <p>levando sua presença digital para o próximo nível</p>
           <div>
             <a href="https://www.facebook.com" target={"_blank"}>
-              <FacebookLogo size={32} />
+              <FacebookLogo size={48} />
             </a>
             <a href="https://www.twitter.com" target={"_blank"}>
-              <TwitterLogo size={32} />
+              <TwitterLogo size={48} />
             </a>
             <a href="https://www.linkedin.com" target={"_blank"}>
-              <LinkedinLogo size={32} />
+              <LinkedinLogo size={48} />
             </a>
             <a href="https://www.instagram.com" target={"_blank"}>
-              <InstagramLogo size={32} />
+              <InstagramLogo size={48} />
             </a>
             <a href="https://www.pinterest.com" target={"_blank"}>
-              <PinterestLogo size={32} />
+              <PinterestLogo size={48} />
             </a>
           </div>
         </div>
-        <div className="hours">
+        <div className="hours toOcult">
           <h3>Atendimento</h3>
           <p>Segunda à Sábado</p>
           <p>
