@@ -1,129 +1,85 @@
 import styled from "styled-components";
 
-const maxWidth = "1140px";
-const cardWidthMobile = "100%";
-const cardWidthTablet = "50%";
-const cardWidthDesktop = "25%";
-const cardMargin = "0 1rem";
-const cardBorderRadius = "0.5rem";
-
 export const Section = styled.section`
-  padding-top: 5rem;
   padding-bottom: 2.5rem;
+  h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-  .container {
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0 auto;
-    max-width: ${maxWidth};
+    max-width: 1140px;
+  }
 
-    .wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -1rem;
+  .wrapperb {
+    max-width: 1280px;
+    display: flex;
+    margin: -4rem auto 0;
+    align-items: center;
+    img {
+      width: 50vw;
+    }
 
-      > div {
-        padding: 0 1rem;
-        width: 100%;
-
-        h2 {
-          font-size: 2.25rem;
-          font-weight: 700;
-          line-height: 1.2;
-          margin-bottom: 1rem;
-
-          @media (min-width: 640px) {
-            font-size: 2.5rem;
-          }
-        }
-
-        p {
-          font-size: 1rem;
-          line-height: 1.5;
-          margin-bottom: 0;
-        }
+    @media (max-width: 1024px) {
+      .wrapperb {
+        display: flex;
       }
+    }
 
-      @media (min-width: 640px) {
-        > div {
-          margin: 0 auto;
-          max-width: 510px;
+    @media (max-width: 640px) {
+      .wrapperb {
+        display: block;
+        img {
+          width: unset;
+        }
+        h2 {
           text-align: center;
-          margin-bottom: 60px;
         }
       }
     }
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+    .desaparecer {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .desaparecer.scroll {
+      opacity: 0;
+    }
+    .mover {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: moveUpDown 2s ease-in-out infinite;
+    }
 
-      .item {
-        width: ${cardWidthMobile};
-        padding: ${cardMargin};
-
-        .team-member {
-          margin: 0 auto;
-          width: 100%;
-          max-width: 370px;
-
-          img {
-            width: 100%;
-          }
-
-          .card {
-            position: relative;
-            overflow: hidden;
-            border-radius: ${cardBorderRadius};
-            margin-bottom: 2rem;
-
-            .details {
-              position: absolute;
-              bottom: 5px;
-              left: 0;
-              width: 100%;
-              text-align: center;
-
-              .info {
-                position: relative;
-                margin: 0.5rem 1rem;
-                padding: 5px 3px;
-                background-color: #fff;
-                border-radius: 0.375rem;
-                overflow: hidden;
-
-                h3 {
-                  font-size: 1.25rem;
-                  font-weight: 600;
-                  line-height: 1.2;
-                  margin-bottom: 0.5rem;
-                  color: #1d1d1f;
-                }
-
-                p {
-                  font-size: 0.875rem;
-                  font-weight: 400;
-                  line-height: 1.43;
-                  color: #73737d;
-                  margin-bottom: 0.75rem;
-                }
-              }
-            }
-          }
-        }
-
-        @media (min-width: 640px) {
-          width: ${cardWidthTablet};
-        }
-
-        @media (min-width: 1024px) {
-          width: ${cardWidthDesktop};
-        }
+    @keyframes moveUpDown {
+      0% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, -10px);
+      }
+      100% {
+        transform: translate(-50%, 0);
       }
     }
   }
 
-  @media (min-width: 1024px) {
-    padding-top: 120px;
-    padding-bottom: 5rem;
+  a {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
 `;

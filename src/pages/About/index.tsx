@@ -1,3 +1,8 @@
+import { MouseSimple } from "phosphor-react";
+import { Link } from "react-router-dom";
+import imagem1 from "../../assets/DrawKit Vector Illustration Black Friday & Online Shopping (9).png";
+import Button from "../../components/Button";
+import CardTeam from "../../components/CardTeam";
 import { Section } from "./Styles";
 
 type Props = {};
@@ -5,142 +10,63 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <Section>
-      <div className="container">
-        <div className="wrapper">
-          <div>
-            <h2>Our Awesome Team</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available but
-              the majority have suffered alteration in some form.
-            </p>
-          </div>
+      <div className="wrapperb">
+        <div>
+          <h2>
+            Somos um grupo de amigos apaixonados por tecnologia e marketing que
+            se reunia frequentemente para discutir as últimas tendências do
+            mercado digital.
+          </h2>
+          <br />
+          <h2>
+            Fizemos cursos, participamos de workshops e lemos muitos livros
+            sobre o assunto. Após meses de preparação, finalmente abrimos as
+            portas da nossa agência digital.
+          </h2>
         </div>
-        <div className="cards">
-          <div className="item">
-            <div className="team-member">
-              <div className="card">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-01.jpg"
-                  alt="image"
-                />
-                <div className="details">
-                  <div className="info">
-                    <h3>Coriss Ambady</h3>
-                    <p>Web Developer</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="team-member">
-              <div className="card">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-02.jpg"
-                  alt="image"
-                />
-                <div className="details">
-                  <div className="info">
-                    <h3>Paulo Evandro</h3>
-                    <p>CEO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="team-member">
-              <div className="card">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-03.jpg"
-                  alt="image"
-                />
-                <div className="details">
-                  <div className="info">
-                    <h3>Paulo Evandro</h3>
-                    <p>CEO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="team-member">
-              <div className="card">
-                <img
-                  src="https://cdn.tailgrids.com/1.0/assets/images/team/team-01/image-04.jpg"
-                  alt="image"
-                />
-                <div className="details">
-                  <div className="info">
-                    <h3>Paulo Evandro</h3>
-                    <p>CEO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MouseSimple className="desaparecer mover" size={32} />
+        <img src={imagem1} alt="" />
       </div>
-      <div className="container">
-        <section className="team-intro">
-          <h1>Meet Our Awesome Team</h1>
-          <p>
-            There are many variations of passages of Lorem Ipsum available but
-            the majority have suffered alteration in some form.
-          </p>
-        </section>
-
-        <section className="team-members">
-          <div className="team-member">
-            <div className="card">
-              <img src="image-01.jpg" alt="Coriss Ambady, Web Developer" />
-              <div className="details">
-                <div className="info">
-                  <h3>Coriss Ambady</h3>
-                  <p>Web Developer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <div className="card">
-              <img src="image-02.jpg" alt="Paulo Evandro, CEO" />
-              <div className="details">
-                <div className="info">
-                  <h3>Paulo Evandro</h3>
-                  <p>CEO</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <div className="card">
-              <img src="image-03.jpg" alt="Jasmine Lee, Graphic Designer" />
-              <div className="details">
-                <div className="info">
-                  <h3>Jasmine Lee</h3>
-                  <p>Graphic Designer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="team-member">
-            <div className="card">
-              <img src="image-04.jpg" alt="William Jones, Project Manager" />
-              <div className="details">
-                <div className="info">
-                  <h3>William Jones</h3>
-                  <p>Project Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <h2>Nossa Equipe Incrível</h2>
+      <p>
+        Composta por profissionais altamente qualificados e especializados em
+        diferentes áreas do marketing digital.
+      </p>
+      <div className="cards">
+        <CardTeam
+          srcImg={
+            "https://images.unsplash.com/photo-1550480082-dd9c35032f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          }
+          name={"Aline Almeida"}
+          job={"Gerente de projeto"}
+        ></CardTeam>
+        <CardTeam
+          srcImg={
+            "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          }
+          name={"Paulo Evandro"}
+          job={"Designer gráfico"}
+        ></CardTeam>
+        <CardTeam
+          srcImg={
+            "https://images.unsplash.com/photo-1592621385612-4d7129426394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          }
+          name={"Yasmin Souza"}
+          job={"Especialistas em mídias sociais"}
+        ></CardTeam>
+        <CardTeam
+          srcImg={
+            "https://images.unsplash.com/photo-1614890085618-0e1054da74f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          }
+          name={"Eduardo Ribeiro"}
+          job={"Desenvolvedor de Software"}
+        ></CardTeam>
       </div>
+      <Link to={"/contact"}>
+        <Button background="#FFC1EB" color="#2e1c20">
+          Entrar em contato
+        </Button>
+      </Link>
     </Section>
   );
 };
