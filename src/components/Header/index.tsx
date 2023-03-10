@@ -35,7 +35,7 @@ const Header = (props: Props) => {
             <ul>
               <li>
                 <Link to={"/"} onClick={handleMenuClick}>
-                  Home
+                  Início
                 </Link>
               </li>
               <li>
@@ -44,13 +44,8 @@ const Header = (props: Props) => {
                 </Link>
               </li>
               <li>
-                <Link to={"/services"} onClick={handleMenuClick}>
+                <Link to={"/offers"} onClick={handleMenuClick}>
                   Serviços
-                </Link>
-              </li>
-              <li>
-                <Link to={"/projects"} onClick={handleMenuClick}>
-                  Projetos
                 </Link>
               </li>
               <li>
