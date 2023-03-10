@@ -8,7 +8,6 @@ type Props = {
 };
 
 const ButtonWrapper = styled.button<Props>`
-  margin-top: 15px;
   text-transform: uppercase;
   display: flex;
   gap: 1rem;

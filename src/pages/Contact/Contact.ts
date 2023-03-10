@@ -3,84 +3,64 @@ import styled from "styled-components";
 export const Section = styled.section`
   max-width: 1140px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .box {
-    width: 100%;
-    max-width: 570px;
-
-    h2 {
-      margin-bottom: 6px;
-      font-size: 32px;
-      font-weight: 700;
-
-      @media (min-width: 640px) {
-        font-size: 40px;
-      }
-
-      @media (min-width: 1024px) {
-        font-size: 36px;
-      }
-
-      @media (min-width: 1280px) {
-        font-size: 40px;
-      }
-    }
-
-    section {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 1rem;
-      padding: 0.5rem 0;
-      width: 100%;
-
-      div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
-
-        h4 {
-          font-size: 24px;
-          font-weight: 700;
-        }
-      }
-    }
-
-    @media (min-width: 1024px) {
-      margin-bottom: 0;
+  .first {
+    display: flex;
+    img {
       width: 50%;
     }
-  }
-
-  .contact-maps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-
-    form {
+    .contact-maps {
+      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      width: 80%;
 
-      div {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
         width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .second {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    .box {
+      width: 33%;
+      max-width: 570px;
+
+      section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        width: 100%;
+
+        div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.5rem;
+
+          h4 {
+            font-size: 24px;
+            font-weight: 700;
+          }
+        }
       }
     }
   }
 
   @media (min-width: 1024px) {
-    padding: 120px 0;
+    padding: 1rem 0px;
   }
 `;
 

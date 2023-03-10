@@ -1,3 +1,4 @@
+import imagem from "../../assets/DrawKit Vector Illustration Black Friday & Online Shopping (7).png";
 import Button from "../../components/Button";
 import { Input } from "../../components/Input";
 import { At, MapPin, Phone } from "phosphor-react";
@@ -7,16 +8,23 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <>
-      <Section>
+    <Section>
+      <div className="first">
+        <div className="contact-maps">
+          <h1>Entre em contato</h1>
+          <form action="">
+            <Input label={"Nome: "} type="text" placeholder="Nome" />
+            <Input label={"E-mail: "} type="email" placeholder="E-mail" />
+            <Textarea placeholder="Comentário..." />
+          </form>
+          <Button background="" color="">
+            Enviar
+          </Button>
+        </div>
+        <img src={imagem} alt="" />
+      </div>
+      <div className="second">
         <div className="box">
-          <h2>Fale Conosco</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
           <section>
             <MapPin size={48} />
             <div>
@@ -39,25 +47,16 @@ const Contact = (props: Props) => {
             </div>
           </section>
         </div>
-        <div className="contact-maps">
-          <h1>Entre em contato</h1>
-          <form action="">
-            <Input label={"Nome: "} type="text" placeholder="Nome" />
-            <Input label={"E-mail: "} type="email" placeholder="E-mail" />
-            <Textarea placeholder="Comentário..." />
-            <Button>Enviar</Button>
-          </form>
-        </div>
-      </Section>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d223.55479553508235!2d-48.87654389018271!3d-26.2980959465663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1678068806046!5m2!1spt-BR!2sbr"
-        height="450"
-        style={{ border: 0, width: "100%" }}
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d223.55479553508235!2d-48.87654389018271!3d-26.2980959465663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1678068806046!5m2!1spt-BR!2sbr"
+          height="450"
+          style={{ border: 0, width: "50%", borderRadius: "1rem"}}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </Section>
   );
 };
 
