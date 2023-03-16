@@ -22,6 +22,15 @@ export const Section = styled.section`
         gap: 0.5rem;
         width: 100%;
         margin-top: 1rem;
+
+        input {
+          padding: 0.5rem;
+          border-radius: 0.3rem;
+        }
+
+        Button {
+          
+        }
       }
     }
   }

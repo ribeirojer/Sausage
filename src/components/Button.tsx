@@ -5,6 +5,7 @@ type Props = {
   background?: string;
   color?: string;
   children: ReactNode;
+  type?: "button" | "submit" | "reset" | undefined;
 };
 
 const ButtonWrapper = styled.button<Props>`
@@ -33,9 +34,10 @@ const Button = ({
   background = "#2e1c20",
   color = "#ffffff",
   children,
+  type = "button",
 }: Props) => {
   return (
-    <ButtonWrapper background={background} color={color}>
+    <ButtonWrapper type={`${type}`} background={background} color={color}>
       {children}
     </ButtonWrapper>
   );
