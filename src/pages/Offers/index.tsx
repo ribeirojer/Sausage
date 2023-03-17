@@ -1,68 +1,59 @@
 import { Section } from "./Styles";
-import CardOffer from "../../components/CardOffer";
 import { Link } from "react-router-dom";
+import CardOffer from "../../components/CardOffer";
 import Button from "../../components/Button";
 
 type Props = {};
 
 const Services = (props: Props) => {
+  const initialLink = "https://images.unsplash.com/photo-1";
+  const data = [
+    {
+      img: "454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Sites Corporativos",
+    },
+    {
+      img: "563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Landing Pages",
+    },
+    {
+      img: "611926653458-09294b3142bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+      name: "Branding",
+    },
+    {
+      img: "531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Consultoria",
+    },
+    {
+      img: "552581234-26160f608093?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Marketing Digital",
+    },
+    {
+      img: "576267423445-b2e0074d68a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Blogs",
+    },
+    {
+      img: "551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "E-commerces",
+    },
+    {
+      img: "563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8",
+      name: "Web 3.0",
+    },
+  ];
+
   return (
-    <Section className="container mx-auto">
-      <span className="text-primary mb-2 block text-lg font-semibold">
-        Nossos Serviços
-      </span>
-      <h2 className="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">
-        O que nós Oferecemos
-      </h2>
+    <Section>
+      <h2>O que nós Oferecemos</h2>
       <div className="cards">
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Aline Almeida"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Paulo Evandro"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          }
-          service={"Yasmin Souza"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Eduardo Ribeiro"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Eduardo Ribeiro"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Eduardo Ribeiro"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Eduardo Ribeiro"}
-        ></CardOffer>
-        <CardOffer
-          srcImg={
-            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fG1hcmtldGluZyUyMGRpZ2l0YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          }
-          service={"Eduardo Ribeiro"}
-        ></CardOffer>
+        {data.map((item) => {
+          return (
+            <CardOffer
+              srcImg={`${initialLink}${item.img}&auto=format&fit=crop&w=500&q=60`}
+              service={item.name}
+            ></CardOffer>
+          );
+        })}
       </div>
       <Link to={"/contact"}>
         <Button background="#FFC1EB" color="#2e1c20">

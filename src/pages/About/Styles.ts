@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   padding-bottom: 2.5rem;
+
   h2 {
     text-align: center;
     font-size: 2.25rem;
@@ -9,6 +10,7 @@ export const Section = styled.section`
     line-height: 1.2;
     margin-bottom: 1rem;
   }
+
   p {
     text-align: center;
     margin-bottom: 2rem;
@@ -25,28 +27,10 @@ export const Section = styled.section`
   .wrapperb {
     max-width: 1280px;
     display: flex;
-    margin: -4rem auto 0;
     align-items: center;
+    margin: 0px auto 0px;
     img {
       width: 50vw;
-    }
-
-    @media (max-width: 1024px) {
-      .wrapperb {
-        display: flex;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .wrapperb {
-        display: block;
-        img {
-          width: unset;
-        }
-        h2 {
-          text-align: center;
-        }
-      }
     }
 
     .desaparecer {
@@ -77,6 +61,33 @@ export const Section = styled.section`
     }
   }
 
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 2rem;
+    }
+    .wrapperb {
+      display: flex;
+      margin: 0 auto 4rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 1.8rem;
+      margin: 0 2rem;
+    }
+    .wrapperb {
+      display: block;
+      margin: 0 auto;
+      img {
+        width: unset;
+      }
+      h2 {
+        text-align: center;
+      }
+    }
+  }
   a {
     margin-top: 2rem;
     display: flex;
