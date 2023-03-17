@@ -3,33 +3,45 @@ import styled from "styled-components";
 export const Section = styled.section`
   max-width: 1140px;
   margin: 0 auto;
+
   .first {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
     img {
-      width: 50%;
+      width: 100%;
+      max-width: 570px;
     }
+
     .contact-maps {
-      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
+
+      h1 {
+        text-align: center;
+      }
 
       form {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-        margin-top: 1rem;
+        gap: 1rem;
+        width: 90%;
+        max-width: 570px;
 
         input {
-          padding: 0.5rem;
+          color: #000;
+          padding: 0.8rem 1rem;
           border-radius: 0.3rem;
         }
 
-        Button {
-          
+        button {
+          display: flex;
+          justify-content: center;
         }
       }
     }
@@ -37,18 +49,19 @@ export const Section = styled.section`
 
   .second {
     display: flex;
-    margin-top: 1rem;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+
     .box {
-      width: 33%;
-      max-width: 570px;
+      width: 100%;
 
       section {
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 1rem;
-        margin-top: 1rem;
         padding: 0.5rem 0;
         width: 100%;
 
@@ -56,13 +69,55 @@ export const Section = styled.section`
           width: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          align-items: center;
           gap: 0.5rem;
 
           h4 {
-            font-size: 24px;
+            font-size: 16px;
+          }
+          p {
+            font-size: 22px;
+            text-align: center;
             font-weight: 700;
           }
+        }
+      }
+    }
+
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .first {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .contact-maps {
+        width: 50%;
+        max-width: none;
+      }
+      img {
+        width: 50%;
+        max-width: 570px;
+      }
+    }
+
+    .second {
+      margin-bottom: unset;
+      margin: 2rem 0;
+      flex-wrap: nowrap;
+      .box {
+        width: 50%;
+        max-width: 570px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        section {
+          flex-direction: row;
         }
       }
     }
@@ -70,6 +125,35 @@ export const Section = styled.section`
 
   @media (min-width: 1024px) {
     padding: 1rem 0px;
+
+    .first {
+      img {
+        width: 50%;
+        max-width: none;
+      }
+    }
+
+    .second {
+      .box {
+        width: 50%;
+        max-width: none;
+        gap: 2rem;
+
+        section {
+          div {
+            align-items: flex-start;
+
+            p {
+              text-align: start;
+            }
+          }
+        }
+      }
+
+      iframe {
+        width: 50%;
+      }
+    }
   }
 `;
 

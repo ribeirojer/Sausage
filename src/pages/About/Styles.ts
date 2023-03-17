@@ -66,6 +66,9 @@ export const Section = styled.section`
       font-size: 1.5rem;
       margin: 0 2rem;
     }
+    p {
+      margin: 1rem 2rem;
+    }
     .wrapperb {
       display: flex;
       margin: 0 auto 4rem;
