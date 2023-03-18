@@ -65,10 +65,6 @@ export const Wrapper = styled.main`
     background-color: #6dc8c2;
     color: #4a1942;
 
-    h2 {
-      font-size: 1.5rem;
-    }
-
     .offer {
       display: flex;
       flex-wrap: wrap;
@@ -84,10 +80,6 @@ export const Wrapper = styled.main`
 
     @media (min-width: 1024px) {
       gap: 3rem;
-      flex-direction: column;
-      h2 {
-        font-size: 2rem;
-      }
     }
   }
 

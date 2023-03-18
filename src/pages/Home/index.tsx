@@ -25,7 +25,9 @@ function Home() {
     <Wrapper>
       <div className="wrapperb">
         <div>
-          <h1 className="toOcultSmall">Olá! Pronto para expandir sua presença digital?</h1>
+          <h1 className="toOcultSmall">
+            Olá! Pronto para expandir sua presença digital?
+          </h1>
           <h2 className="toOcult">
             Transforme sua <span>presença digital</span> e aumente seus
             resultados com nossas soluções de marketing personalizadas.
@@ -52,7 +54,9 @@ function Home() {
       </div>
       <div className="wrapperc">
         <div>
-          <h2 className="toOcult">Queremos ajudar a sua empresa a alcançar o sucesso digital. </h2>
+          <h2 className="toOcult">
+            Queremos ajudar a sua empresa a alcançar o sucesso digital.{" "}
+          </h2>
           <h2>
             Entre em contato conosco hoje mesmo e saiba como nossos serviços
             personalizados podem levar o seu negócio para o próximo nível.
