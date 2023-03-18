@@ -66,7 +66,7 @@ const Contact = (props: Props) => {
             <input
               type="hidden"
               name="_next"
-              value="https://sausage-ten.vercel.app/thanks"
+              value="https://sausage-ten.vercel.app/"
             />
             <input type="hidden" name="_subject" value="Novo Contato!" />
             <input type="text" name="_honey" style={{ display: "none" }} />
