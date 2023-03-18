@@ -37,29 +37,40 @@ const Contact = (props: Props) => {
       <div className="first">
         <div className="contact-maps">
           <h1>Entre em contato</h1>
-          <form onSubmit={handleSubmit}>
+          <form
+            action="https://formsubmit.co/eduardojerbr@gmail.com"
+            method="POST"
+          >
             <label>Nome:</label>
             <input
               type="text"
+              name="name"
               placeholder="Digite seu nome"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
+              required
             />
             <label>E-mail:</label>
             <input
               type="email"
+              name="email"
               placeholder="Digite seu e-mail"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              required
             />
             <Textarea
-              placeholder="Comentário..."
-              value={comment}
-              onChange={(event) => setComment(event.target.value)}
-            />
+              name="message"
+              placeholder="Digite sua mensagem"
+              required
+            ></Textarea>
             <Button type="submit" background="#ffbb45" color="#2e1c20">
               Enviar
             </Button>
+            <input
+              type="hidden"
+              name="_next"
+              value="https://sausage-ten.vercel.app/thanks"
+            />
+            <input type="hidden" name="_subject" value="Novo Contato!" />
+            <input type="text" name="_honey" style={{ display: "none" }} />
+            <input type="hidden" name="_captcha" value="false" />
           </form>
         </div>
         <img src={imagem} alt="" />
