@@ -21,11 +21,11 @@ const Footer = (props: Props) => {
         <div className="contacts">
           <h3>Entre em Contato</h3>
           <p>
-            <MapPin size={24} weight="fill" /> Rua Paulo Malschitzki, 240,
+            <MapPin size={24} weight="fill" /> Rua Agrolândia, 325 Glória,
             Joinville - SC
           </p>
           <p>
-            <Phone size={24} weight="fill" /> (12) 98158-0992
+            <Phone size={24} weight="fill" /> (47) 99605-9604
           </p>
           <p>
             <EnvelopeSimple size={24} weight="fill" /> contato@heythere.com

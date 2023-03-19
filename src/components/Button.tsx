@@ -13,7 +13,7 @@ const ButtonWrapper = styled.button<Props>`
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 10px 55px;
+  padding: 12px 60px;
   background-color: ${({ background }) => background};
   color: ${({ color }) => color};
   border-radius: 45px;

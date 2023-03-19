@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo-removebg-preview.png";
 import { Container } from "./Styles";
 
@@ -7,6 +7,8 @@ type Props = {};
 
 const Header = (props: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const location = useLocation();
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -56,6 +58,42 @@ const Header = (props: Props) => {
             </ul>
           </nav>
         </div>
+        <nav className="menularge">
+          <ul>
+            <li>
+              <Link
+                to={"/"}
+                className={location.pathname === "/" ? "active" : ""}
+              >
+                Início
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/agency"}
+                className={location.pathname === "/agency" ? "active" : ""}
+              >
+                A Agência
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/offers"}
+                className={location.pathname === "/offers" ? "active" : ""}
+              >
+                Serviços
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/contact"}
+                className={location.pathname === "/contact" ? "active" : ""}
+              >
+                Contato
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </Container>
   );

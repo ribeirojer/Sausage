@@ -128,4 +128,33 @@ export const Container = styled.header`
     visibility: visible;
     opacity: 1;
   }
+
+  .menularge {
+    display: none;
+    li a {
+      padding: 0.3rem;
+      transition: 0.5s;
+      font-weight: 700;
+      &:hover {
+        color: ${colorClara};
+      }
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid rgb(199, 184, 248);
+  }
+
+  @media (min-width: 640px) {
+    .checkbox-wrapper {
+      display: none;
+    }
+    .menularge {
+      display: flex;
+      ul {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+  }
 `;

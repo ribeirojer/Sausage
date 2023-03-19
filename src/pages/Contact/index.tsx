@@ -81,14 +81,14 @@ const Contact = (props: Props) => {
             <MapPin size={48} />
             <div>
               <h4>Nossa Localização</h4>
-              <p>Rua Agrolândia, 325 Glória, Joinville - SC, Brasil</p>
+              <p>Rua Agrolândia, 325 Glória, Joinville - SC</p>
             </div>
           </section>
           <section>
             <Phone size={48} />
             <div>
               <h4>Número de Telefone</h4>
-              <p>(12) 98158 0992</p>
+              <p>(47) 99605-9604</p>
             </div>
           </section>
           <section>
