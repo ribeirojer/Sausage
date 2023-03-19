@@ -33,7 +33,7 @@ function Home() {
             resultados com nossas soluções de marketing personalizadas.
           </h2>
           <Link to={"/contact"}>
-            <Button background="#C7B8F8" color="#2e1c20">
+            <Button background="#ffbb45" color="#2e1c20">
               SIM!
             </Button>
           </Link>

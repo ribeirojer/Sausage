@@ -35,6 +35,7 @@ export const Wrapper = styled.footer`
         align-items: center;
       }
       p svg {
+        color: #ffbb45;
         margin-right: 5px;
       }
     }
@@ -59,7 +60,7 @@ export const Wrapper = styled.footer`
         transition: 0.3s;
       }
       div a:hover {
-        color: #ffc1eb;
+        color: #ffbb45;
       }
     }
 
@@ -78,6 +79,7 @@ export const Wrapper = styled.footer`
       }
       p span {
         margin: 0 0.5rem;
+        color: #ffbb45;
       }
     }
   }
