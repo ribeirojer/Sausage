@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Offers from "./pages/Offers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Sign from "./pages/Sign";
 import Thanks from "./pages/Thanks";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
@@ -21,7 +20,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/offers" element={<Offers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thanks" element={<Thanks />} />
-          <Route path="/sign" element={<Sign />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

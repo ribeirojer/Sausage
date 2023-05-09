@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { MouseSimple } from "phosphor-react";
 import { Wrapper } from "./Styles";
+import { useEffect } from "react";
 
 function Home() {
   document.addEventListener("scroll", function () {
@@ -21,6 +22,10 @@ function Home() {
     }
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Wrapper>
       <div className="wrapperb">
@@ -28,7 +33,7 @@ function Home() {
           <h1 className="toOcultSmall">
             Olá! Pronto para expandir sua presença digital?
           </h1>
-          <h2 className="toOcult">
+          <h2 className="toOcult text-2xl">
             Transforme sua <span>presença digital</span> e aumente seus
             resultados com nossas soluções de marketing personalizadas.
           </h2>
@@ -54,10 +59,24 @@ function Home() {
       </div>
       <div className="wrapperc">
         <div>
-          <h2 className="toOcult">
+          <h2
+            className="toOcult text-2xl"
+            style={{
+              fontFamily: "Dancing Script",
+              fontSize: "2rem",
+              fontWeight: "bold",
+            }}
+          >
             Queremos ajudar a sua empresa a alcançar o sucesso digital.{" "}
           </h2>
-          <h2>
+          <h2
+            className="text-2xl"
+            style={{
+              fontFamily: "Dancing Script",
+              fontSize: "2rem",
+              fontWeight: "bold",
+            }}
+          >
             Entre em contato conosco hoje mesmo e saiba como nossos serviços
             personalizados podem levar o seu negócio para o próximo nível.
           </h2>

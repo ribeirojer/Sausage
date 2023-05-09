@@ -2,6 +2,7 @@ import { Section } from "./Styles";
 import { Link } from "react-router-dom";
 import CardOffer from "../../components/CardOffer";
 import Button from "../../components/Button";
+import { useEffect } from "react";
 
 type Props = {};
 
@@ -41,6 +42,10 @@ const Services = (props: Props) => {
       name: "Web 3.0",
     },
   ];
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Section>

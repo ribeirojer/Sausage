@@ -4,21 +4,26 @@ import imagem1 from "../../assets/DrawKit Vector Illustration Black Friday & Onl
 import Button from "../../components/Button";
 import CardTeam from "../../components/CardTeam";
 import { Section } from "./Styles";
+import { useEffect } from "react";
 
 type Props = {};
 
 const About = (props: Props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Section>
       <div className="wrapperb">
         <div>
-          <h2>
+          <h2 style={{ fontFamily: "Dancing Script", fontSize: "2rem" }}>
             Somos um grupo de amigos apaixonados por tecnologia e marketing que
             se reunia frequentemente para discutir as últimas tendências do
             mercado digital.
           </h2>
           <br />
-          <h2>
+          <h2 style={{ fontFamily: "Dancing Script", fontSize: "2rem" }}>
             Fizemos cursos, participamos de workshops e lemos muitos livros
             sobre o assunto. Após meses de preparação, finalmente abrimos as
             portas da nossa agência digital.
@@ -37,7 +42,7 @@ const About = (props: Props) => {
           srcImg={
             "https://images.unsplash.com/photo-1550480082-dd9c35032f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
           }
-          name={"Aline Almeida"}
+          name={"Aline Reiner"}
           job={"Gerente de projeto"}
         ></CardTeam>
         <CardTeam

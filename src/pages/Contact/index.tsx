@@ -2,47 +2,27 @@ import imagem from "../../assets/DrawKit Vector Illustration Black Friday & Onli
 import Button from "../../components/Button";
 import { At, MapPin, Phone } from "phosphor-react";
 import { Section, Textarea } from "./Contact";
-import { useState } from "react";
+import { useEffect } from "react";
 
 type Props = {};
 
 const Contact = (props: Props) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [comment, setComment] = useState("");
-
-  function handleSubmit(event: any) {
-    event.preventDefault();
-
-    fetch("https://exemplo.com/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, comment }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        alert("Formulário enviado com sucesso!");
-      })
-      .catch((error) => {
-        console.error(error);
-        alert("Ocorreu um erro ao enviar o formulário.");
-      });
-  }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Section>
       <div className="first">
         <div className="contact-maps">
-          <h1>Entre em contato</h1>
+          <h1>Agradecemos seu contato!</h1>
           <form
             action="https://formsubmit.co/eduardojerbr@gmail.com"
             method="POST"
           >
-            <label>Nome:</label>
+            <label className="font-bold  text-xl ">Nome:</label>
             <input
+              className="text-[#2e1c20] font-bold p-2 w-full rounded-md"
               type="text"
               name="name"
               placeholder="Digite seu nome"
@@ -50,12 +30,14 @@ const Contact = (props: Props) => {
             />
             <label>E-mail:</label>
             <input
+              className="text-[#2e1c20] font-bold p-2 w-full rounded-md"
               type="email"
               name="email"
               placeholder="Digite seu e-mail"
               required
             />
             <Textarea
+              className="text-[#2e1c20] font-bold p-2 w-full rounded-md"
               name="message"
               placeholder="Digite sua mensagem"
               required
